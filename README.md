@@ -1,6 +1,6 @@
 # 📋 tasks
 
-A simple and clean to-do list app I built while learning JavaScript. You can add tasks, mark them as done, and they get saved automatically.
+A simple and clean to-do list app I built while learning JavaScript. Add tasks, mark them as done, and everything saves automatically in your browser.
 
 ---
 
@@ -13,36 +13,32 @@ A simple and clean to-do list app I built while learning JavaScript. You can add
 ## ✨ Features
 
 - Add new tasks quickly
-- Mark tasks as complete with a checkbox
+- Mark tasks as complete
 - Delete tasks
-- Tasks are saved in your browser (won't disappear when you refresh)
+- Tasks are saved automatically (localStorage)
 - New tasks appear at the top
 - Clean dark design with yellow accents
-- Enter key support to add tasks faster
+- Press Enter to add tasks
 
 ## 📝 The Process
 
-This was my fourth small project. I wanted something practical that I could actually use every day. 
+This was my fourth small project. After building the calculator, pomodoro timer, and password generator, I wanted something practical I could actually use daily.
 
-I spent a couple of hours on it — figuring out how to save tasks with localStorage and making the UI feel nice was the main focus. I also added a task counter and an empty state message to make it feel more complete.
+I spent a couple of hours making sure it felt smooth — especially saving the tasks so they don’t disappear when you refresh the page, and adding a nice empty state when there are no tasks.
 
 ## 🚀 Running the Project
 
 **Live Demo:**  
-[https://your-link-here.netlify.app/](https://your-link-here.netlify.app/)
-
-*(Replace with your actual Netlify or GitHub Pages link)*
+[https://celebrated-brigadeiros-591d23.netlify.app/](https://celebrated-brigadeiros-591d23.netlify.app/)
 
 **Or run locally:**  
 Just open `index.html` in your browser.
 
 ## 📸 Preview
 
-![Tasks App Preview 1](preview-1.png)
+![Tasks App Preview 1](https://drive.google.com/uc?id=11pqER5FSxVU6fU7Ici5f_wly6b9iknmb)
 
-![Tasks App Preview 2](preview-2.png)
-
-*(Upload your screenshots as `preview-1.png` and `preview-2.png` or update the filenames)*
+![Tasks App Preview 2](https://drive.google.com/uc?id=1uk2Ik8tUM8596sKpC_M-Vnl8-Dtjv9wf)
 
 ---
 
