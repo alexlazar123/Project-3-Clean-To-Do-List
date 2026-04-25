@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tasks • Alex Lazar</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Space+Grotesk:wght@500;600&display=swap');
+        body { font-family: 'Inter', sans-serif; }
+        .title { font-family: 'Space Grotesk', sans-serif; }
+    </style>
+</head>
+<body class="bg-zinc-950 text-white min-h-screen p-6">
+    <div class="max-w-md mx-auto">
+        
+        <div class="flex items-center justify-between mb-10">
+            <div class="flex items-center gap-3">
+                <div class="w-10 h-10 bg-yellow-500 rounded-3xl flex items-center justify-center text-2xl">📋</div>
+                <h1 class="title text-4xl font-semibold tracking-tighter">tasks</h1>
+            </div>
+            <div id="count" class="text-yellow-400 text-sm font-medium">0 tasks</div>
+        </div>
+
+        <!-- Add new task -->
+        <div class="flex gap-3 mb-8">
+            <input type="text" id="task-input" 
+                   class="flex-1 bg-zinc-900 border border-zinc-700 rounded-3xl px-6 py-4 text-lg focus:outline-none focus:border-yellow-500 placeholder-zinc-500"
+                   placeholder="Add a new task...">
+            <button onclick="addTask()" 
+                    class="bg-yellow-500 hover:bg-yellow-600 text-black px-10 rounded-3xl font-semibold text-lg">ADD</button>
+        </div>
+
+        <!-- Task list -->
+        <div id="task-list" class="space-y-3 min-h-[300px]"></div>
+
+        <div class="text-center text-xs text-zinc-500 mt-12">
+            Made by Alex Lazar
+        </div>
+    </div>
+
+    <script>
+        // my todo list - yellow version
+        let tasks = [];
+
+        const taskInput = document.getElementById("task-input");
+        const taskList = document.getElementById("task-list");
+        const countEl = document.getElementById("count");
+
+        function loadTasks() {
+            const saved = localStorage.getItem("mytasks");
+            if (saved) {
+                tasks = JSON.parse(saved);
+            }
+            renderTasks();
+        }
+
+        function saveTasks() {
+            localStorage.setItem("mytasks", JSON.stringify(tasks));
+        }
+
+        function updateCount() {
+            countEl.textContent = `${tasks.length} tasks`;
+        }
+
+        function addTask() {
+            const text = taskInput.value.trim();
+            if (text === "") return;
+
+            tasks.unshift({
+                id: Date.now(),
+                text: text,
+                completed: false
+            });
+
+            taskInput.value = "";
+            renderTasks();
+            saveTasks();
+        }
+
+        function toggleComplete(id) {
+            tasks = tasks.map(task => {
+                if (task.id === id) task.completed = !task.completed;
+                return task;
+            });
+            renderTasks();
+            saveTasks();
+        }
+
+        function deleteTask(id) {
+            tasks = tasks.filter(task => task.id !== id);
+            renderTasks();
+            saveTasks();
+        }
+
+        function renderTasks() {
+            taskList.innerHTML = "";
+
+            if (tasks.length === 0) {
+                taskList.innerHTML = `
+                    <div class="text-center py-12 text-zinc-500">
+                        No tasks yet.<br>Time to add some!
+                    </div>`;
+                updateCount();
+                return;
+            }
+
+            tasks.forEach(task => {
+                const item = document.createElement("div");
+                item.className = `group bg-zinc-900 border border-zinc-700 rounded-3xl p-5 flex items-center gap-4 transition-all hover:border-yellow-500/30 ${task.completed ? 'opacity-75' : ''}`;
+                
+                item.innerHTML = `
+                    <input type="checkbox" ${task.completed ? 'checked' : ''} 
+                           onclick="toggleComplete(${task.id})"
+                           class="w-6 h-6 accent-yellow-500 cursor-pointer">
+                    <span class="flex-1 text-lg ${task.completed ? 'line-through text-zinc-400' : ''}">${task.text}</span>
+                    <button onclick="deleteTask(${task.id})" 
+                            class="text-zinc-400 hover:text-red-400 text-xl opacity-0 group-hover:opacity-100 transition-all">
+                        ✕
+                    </button>
+                `;
+                taskList.appendChild(item);
+            });
+            
+            updateCount();
+        }
+
+        // Enter key support
+        taskInput.addEventListener("keypress", (e) => {
+            if (e.key === "Enter") addTask();
+        });
+
+        // Initialize
+        window.onload = loadTasks;
+        
+        console.log("tasks ready");
+    </script>
+</body>
+</html>
