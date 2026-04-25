@@ -10,17 +10,17 @@
 
 ## ✨ Features
 
-- Add new tasks quickly
+- Add new tasks quickly and efficiently
 - Mark tasks as complete
 - Delete tasks
 - Tasks are saved automatically
 - New tasks appear at the top
-- Dark design with mix of yellow
+- Dark design with a mix of yellow
 - Press Enter to add tasks
 
 ## 📝 What i've learned
 
-- I've gotten much better at JavaScript fundamentals
+- I've gotten much better at the JavaScript fundamentals
 - I've learned how to manipulate the DOM properly
 - I practised how to keep my code organised
 - I practised how to build interactive web apps
