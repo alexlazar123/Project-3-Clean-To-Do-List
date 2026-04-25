@@ -36,11 +36,3 @@ Link to run the web app here:
 ![Tasks App Preview 1](https://drive.google.com/uc?id=11pqER5FSxVU6fU7Ici5f_wly6b9iknmb)
 
 ![Tasks App Preview 2](https://drive.google.com/uc?id=1uk2Ik8tUM8596sKpC_M-Vnl8-Dtjv9wf)
-
----
-
-**Made by Alex Lazar**  
-19-year-old self-taught developer from the UK  
-Building small projects while applying to Computer Science programs.
-
-Feel free to fork it or use it as inspiration!
