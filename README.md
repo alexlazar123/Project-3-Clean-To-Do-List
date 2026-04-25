@@ -25,7 +25,7 @@ A simple and clean to-do list app I built while learning JavaScript. Add tasks, 
 - I've gotten much better at JavaScript fundamentals
 - I've learned how to manipulate the DOM properly
 - I practised how to keep my code organised
-- I practised How to build interactive web apps
+- I practised how to build interactive web apps
 - I practised updating the user interface
 - Solidified the importance of persistence
 
