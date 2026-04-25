@@ -6,25 +6,28 @@ A simple and clean to-do list app I built while learning JavaScript. Add tasks, 
 
 ## 🛠 Technologies
 
-- HTML5
-- Tailwind CSS
-- Vanilla JavaScript
+- HTML
+- CSS
+- JavaScript
 
 ## ✨ Features
 
 - Add new tasks quickly
 - Mark tasks as complete
 - Delete tasks
-- Tasks are saved automatically (localStorage)
+- Tasks are saved automatically
 - New tasks appear at the top
-- Clean dark design with yellow accents
+- Dark design with mix of yellow
 - Press Enter to add tasks
 
-## 📝 The Process
+## 📝 What i've learned
 
-This was my fourth small project. After building the calculator, pomodoro timer, and password generator, I wanted something practical I could actually use daily.
-
-I spent a couple of hours making sure it felt smooth — especially saving the tasks so they don’t disappear when you refresh the page, and adding a nice empty state when there are no tasks.
+- I've gotten much better at JavaScript fundamentals
+- I've learned how to manipulate the DOM properly
+- I practised how to keep my code organised
+- I practised How to build interactive web apps
+- I practised updating the user interface
+- Solidified the importance of persistence
 
 ## 🚀 Running the Project
 
