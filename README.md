@@ -1,8 +1,6 @@
-# 📋 tasks
+# 📋 Modern To Do List
 
-A simple and clean to-do list app I built while learning JavaScript. Add tasks, mark them as done, and everything saves automatically in your browser.
-
----
+- A simple and clean to do list web app
 
 ## 🛠 Technologies
 
