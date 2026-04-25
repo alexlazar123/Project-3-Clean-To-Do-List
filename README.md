@@ -1,6 +1,6 @@
 # 📋 Modern To Do List
 
-- A simple and clean to do list web app
+A simple and clean to do list web app
 
 ## 🛠 Technologies
 
