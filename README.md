@@ -28,12 +28,8 @@
 - Solidified the importance of persistence
 
 ## 🚀 Running the Project
-
-**Live Demo:**  
+Link to run the web app here:
 [https://celebrated-brigadeiros-591d23.netlify.app/](https://celebrated-brigadeiros-591d23.netlify.app/)
-
-**Or run locally:**  
-Just open `index.html` in your browser.
 
 ## 📸 Preview
 
